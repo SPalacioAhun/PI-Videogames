@@ -4,11 +4,12 @@ const { Router } = require('express');
 const router = Router();
 const videogames = require('../controllers/videogames');
 const {getVideogameById} = require('../controllers/getVideogameById');
-
+const getVideogameByName = require('../controllers/getVideogameByName');
 
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
+router.get('/videogames/name', getVideogameByName)
 router.get('/', videogames)
 router.get('/:idVideogame', getVideogameById)
 
