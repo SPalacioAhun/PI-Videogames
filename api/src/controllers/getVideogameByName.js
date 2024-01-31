@@ -8,7 +8,7 @@ const URL = `https://api.rawg.io/api/games?key=${RAWG_API_KEY}`;
 
 const getVideoGameByName = async (req, res) => {
   const { name } = req.query;
-  console.log(name);
+  
   try {
     if (!name) {
       return res.status(400).json({ error: 'Debe ingresar un nombre para buscar el Videogame' });
@@ -18,6 +18,7 @@ const getVideoGameByName = async (req, res) => {
 
     // Búsqueda en la API
     const apiResponse = await axios.get(`${URL}&search=${encodeURIComponent(formattedName)}&search_precise=true&page_size=15`);
+    
     const apiGames = apiResponse.data.results.map(game => ({
       id: game.id,
       name: game.name,

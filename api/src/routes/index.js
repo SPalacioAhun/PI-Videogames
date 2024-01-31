@@ -5,12 +5,16 @@ const router = Router();
 const videogames = require('../controllers/videogames');
 const {getVideogameById} = require('../controllers/getVideogameById');
 const getVideogameByName = require('../controllers/getVideogameByName');
+const {createVideogame} = require('../controllers/createVideogame');
+const {getGenres} = require('../controllers/getGenres')
 
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-router.get('/videogames/name', getVideogameByName)
-router.get('/', videogames)
-router.get('/:idVideogame', getVideogameById)
+router.get("/genres", getGenres);
+router.get('/videogames/name', getVideogameByName);
+router.get('/', videogames);
+router.get('/:idVideogame', getVideogameById);
+router.post('/videogame', createVideogame);
 
 module.exports = router;

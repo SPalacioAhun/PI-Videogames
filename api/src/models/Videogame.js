@@ -23,15 +23,15 @@ module.exports = (sequelize) => {
     },
     image: {
       type: DataTypes.STRING, // Puedes ajustar el tipo de datos según tus necesidades
-      allowNull: false,
+     // allowNull: false,
     },
     releaseDate: {
       type: DataTypes.DATE,
-      allowNull: false,
+     // allowNull: false,
     },
     rating: {
       type: DataTypes.FLOAT,
-      allowNull: false,
+     //allowNull: false,
     },
   });
 };
