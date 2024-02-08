@@ -1,4 +1,4 @@
-.cliploader {
+ .cliploader {
     display: inline-block;
     position: relative;
     width: 80px;
@@ -34,4 +34,6 @@
       height: 32px;
     }
   }
+   
+
   

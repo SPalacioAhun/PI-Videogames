@@ -1,0 +1,39 @@
+/* .container {
+    display:flex;
+    flex-direction: row-reverse;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box; 
+    border-radius: 5px; 
+    background-color: #f7e5e5;
+} */
+
+/* Estilos adicionales para un aspecto más interactivo al pasar el ratón */
+/* .container:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+} */
+
+.labelGenre {
+  width: auto;
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: #0e0c0c; /* Color de texto */
+  background-color: #f073d7; /* Color de fondo */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 0px;
+}
+
+.labelGenre:hover {
+  background-color: #f01fcd; /* Cambio de color al pasar el mouse */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el mouse */
+}

@@ -13,8 +13,8 @@ const {getGenres} = require('../controllers/getGenres')
 // Ejemplo: router.use('/auth', authRouter);
 router.get("/genres", getGenres);
 router.get('/videogames/name', getVideogameByName);
-router.get('/', videogames);
-router.get('/:idVideogame', getVideogameById);
-router.post('/videogame', createVideogame);
+router.get('/videogames', videogames);
+router.get('/videogames/:idVideogame', getVideogameById);
+router.post('/videogames', createVideogame);
 
 module.exports = router;

@@ -34,12 +34,14 @@
 // }
 
 // export default Detail;
-
+//!----------------
+//*original
 
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { loadGameById } from "../../redux/actions";
+import style from '../detail/detail.module.css'
 
 function Detail() {
   const { id } = useParams();
@@ -51,7 +53,7 @@ function Detail() {
   }, [dispatch, id]);
 
   return (
-    <div className="App">
+    <div className={style.detail}>
       <h1>Detalles del Juego</h1>
       {game && (
         <div>

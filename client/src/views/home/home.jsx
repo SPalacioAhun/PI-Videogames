@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { loadGames } from '../../redux/actions';
+import { loadGames, loadGenres } from '../../redux/actions';
 import Cards from '../../components/cards/cards';
-import Searchbar from '../../components/searchbar/searchar';
+import NavBar from '../../components/NavBar/NavBar'
+
 
 function Home() {
   const dispatch = useDispatch();
@@ -10,12 +11,16 @@ function Home() {
   useEffect(() => {
     // Llamar a la acción loadGames cuando el componente Home se monta
     dispatch(loadGames());
+    dispatch(loadGenres());
   }, [dispatch]);
+
+  
 
   return (
     <div className="App">
-      <h1>Estás en el Home</h1>
-      <Searchbar />
+      
+      <NavBar />
+     
       <Cards />
     </div>
   );
@@ -23,7 +28,7 @@ function Home() {
 
 export default Home;
 
-
+//!........................
 // import React, { useEffect, useState } from 'react';
 // import { useDispatch, useSelector } from 'react-redux';
 // import { loadGames } from '../../redux/actions';
@@ -63,4 +68,4 @@ export default Home;
 // }
 
 // export default Home;
-
+//!---------------------------------------------
